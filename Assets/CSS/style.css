@@ -1,0 +1,53 @@
+.row1 {
+    text-align: center
+}
+
+#Game {
+    text-align: center 
+}
+
+body {
+    background-color:#000000;
+    color: white
+}
+
+img {
+    width: 45%;
+    height: auto;
+}
+
+/* Extra Small Devices, Phones */ 
+@media screen and (max-width : 640px) {
+    .container {
+    width: 100%;
+    margin: auto;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    }  
+    
+    .row2 {
+        padding-top: 25px;
+    }
+     
+}
+
+
+  /* Small Devices, Tablets */
+  @media screen and (max-width : 768px) {
+    .container {
+      width: 100%;
+      padding-left: 50px;
+    }
+            
+   }
+
+   
+  /* Medium Devices, Desktops */
+  @media screen and (max-width : 980px) {
+    .container {
+      width: 100%;
+      padding-left: 50px;
+      }
+    }
