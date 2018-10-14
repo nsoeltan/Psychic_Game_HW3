@@ -1,8 +1,15 @@
+
 var LettersToBeGuessed = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var Wins = 0;
 var Losses = 0;
 var guessesLeft = 9;
 var guess = [];
+
+var reset = function () {
+  guessesLeft = 9;
+  guess = []
+
+};
 
 document.onkeyup = function (event) {
   var UserGuess = event.key;
@@ -13,19 +20,19 @@ document.onkeyup = function (event) {
 
   if (UserGuess === ComputerGuess) {
     Wins++;
-    guessesLeft = 8;
+
   }
 
   else {
-    guessesLeft--;
-  }
-
-  if (guessesLeft === 0) {
     Losses++;
-    guessesLeft = 8;
+    guessesLeft--;
+
   }
 
+  if (guessesLeft === 1) {
+    reset();
 
+  }
 
   var html = "<h4>Guess What Letter I'm thinking Of:</h4>" +
     "<p>Wins: " + Wins + "</p>" +
